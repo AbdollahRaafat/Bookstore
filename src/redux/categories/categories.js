@@ -1,6 +1,10 @@
 const CHECK_STATUS = './library/categories/CHECK_STATUS';
 
-const stateInit = [];
+const stateInit = {
+  type: 'action',
+  checked: true,
+  payload: 'Under construction',
+};
 
 export const checkStatus = (payload) => ({
   type: CHECK_STATUS,
@@ -10,7 +14,7 @@ export const checkStatus = (payload) => ({
 const catReducer = (state = stateInit, action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return 'Under construction';
+      return action.payload;
 
     default:
       return state;
