@@ -15,6 +15,11 @@ const ListOfBooks = ({ item }) => (
                 category={book.category}
                 author={book.author}
               />
+              <div className="buttons-left">
+                <button type="button" className="br blueText">Comments</button>
+                <button type="button" className="br blueText">Remove</button>
+                <button type="button" className="blueText">Edit</button>
+              </div>
             </div>
             <div className="buttons-right">
               <button type="button" id="completed">Completed</button>
