@@ -41,33 +41,35 @@ const AddBookForm = () => {
     <div className="add">
       <h1>ADD NEW BOOK</h1>
       <form className="addNew flex-row" onSubmit={addToStore}>
-        <label htmlFor="title">
-          <input
-            type="text"
-            placeholder="Book title"
-            name="title"
-            id="title"
-            className="flex-row"
-            onChange={onChange}
-          />
-        </label>
-        <label htmlFor="author">
-          <input
-            type="text"
-            placeholder="Author"
-            name="author"
-            id="author"
-            className="flex-row"
-            onChange={onChange}
-          />
-        </label>
-        <select placeholder="categories" name="category" onChange={onChange} required>
-          <option value="">Category</option>
-          <option value="Romance">Biography</option>
-          <option value="Documentary">History</option>
-          <option value="Fiction">Fiction</option>
-          <option value="Crime">Crime</option>
-        </select>
+        <div className="flex-row">
+          <label htmlFor="title">
+            <input
+              type="text"
+              placeholder="Book title"
+              name="title"
+              id="title"
+              className="flex-row"
+              onChange={onChange}
+            />
+          </label>
+          <label htmlFor="author">
+            <input
+              type="text"
+              placeholder="Author"
+              name="author"
+              id="author"
+              className="flex-row"
+              onChange={onChange}
+            />
+          </label>
+          <select placeholder="categories" id="catOpt" name="category" onChange={onChange} required>
+            <option value="">Category</option>
+            <option value="Romance">Biography</option>
+            <option value="Documentary">History</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Crime">Crime</option>
+          </select>
+        </div>
         <button type="submit" onClick={addToStore} value="submit" id="submit">
           Submit
         </button>

@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto+Slab:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azure: #0290ff;
+  --black-two: #121212;
+  --white: #fff;
+  --grey-border: #e8e8e8;
+  --cool-blue: #4386bf;
+  --warm-grey: #888;
+  --pale-grey: #f5f6fa;
+  --very-light-pink: #c4c4c4;
+  --medium-blue: #307bbe;
+}
+
 body {
   margin: 0;
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
     'Segoe UI',
     'Roboto',
     'Oxygen',
@@ -12,9 +31,11 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(216, 216, 216);
+}
+
+span {
+  margin: 0;
+  padding: 0;
 }
 
 .flex-row {
@@ -29,7 +50,18 @@ body {
 }
 
 .br {
-  border-right: 1px solid rgb(175, 175, 175) !important;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  border-right: solid 1px var(--grey-border);
 }
 
 button {
@@ -39,132 +71,4 @@ button {
   background-color: #fff;
   font-weight: 700;
   font-size: 1rem;
-}
-
-.main-content {
-  width: 80%;
-  padding: 0 30px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  min-height: 90vh;
-}
-
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
-}
-
-.navbar {
-  width: 80%;
-  padding: 0 30px;
-  margin: 50px auto 0 auto;
-  color: rgb(87, 129, 196);
-  background-color: #fff;
-  border-bottom: 2px solid rgb(87, 129, 196);
-}
-
-.navmenu {
-  list-style: none;
-}
-
-.navmenu a {
-  color: rgb(114, 150, 207);
-  margin-left: 40px;
-  text-decoration: none;
-}
-
-.book {
-  padding: 10px 0;
-}
-
-.book span {
-  margin: 10px 0;
-}
-
-.bookLeft {
-  width: 90%;
-  padding: 50px;
-}
-
-.book-row {
-  margin: 40px 0;
-  width: 100%;
-  justify-content: space-between;
-  border: 1px solid rgb(174, 188, 211);
-  height: 240px;
-}
-
-.blueText {
-  color: rgb(87, 129, 196);
-}
-
-.greyText {
-  color: rgb(175, 175, 175);
-}
-
-.buttons-left {
-  margin: 0 -30px;
-}
-
-.buttons-right {
-  margin-right: 20px;
-}
-
-#completed {
-  width: 100%;
-  background-color: rgb(87, 129, 196);
-  border-radius: 7px;
-  color: #fff;
-  font-weight: 100;
-  padding: 10px 20px;
-}
-
-.addNew {
-  width: 100%;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-input {
-  height: 45px;
-}
-
-::placeholder {
-  padding-left: 20px;
-  color: grey;
-  font-size: 1.5em;
-}
-
-#title {
-  width: 500px;
-}
-
-#author {
-  width: 300px;
-}
-
-#submit {
-  background-color: rgb(87, 129, 196);
-  height: 45px;
-  color: #fff;
-  border-radius: 5px;
-}
-
-#cat {
-  text-align: center;
-}
-
-#cat button {
-  margin-top: 100px;
-  background-color: rgb(45, 45, 141);
-  border-radius: 10px;
-  height: 70px;
-  color: #fff;
 }
