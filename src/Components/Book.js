@@ -4,9 +4,9 @@ const Book = ({
   id, title, author, category,
 }) => (
   <div id={id} className="book flex-col">
-    <span className="greyText">{category}</span>
-    <span id="title">{title}</span>
-    <span className="blueText">{author}</span>
+    <p className="greyText">{category}</p>
+    <p className="title">{title}</p>
+    <p className="blueText">{author}</p>
   </div>
 );
 
