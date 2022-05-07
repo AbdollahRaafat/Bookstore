@@ -1,11 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Book from './Book';
-import { removeBook } from '../redux/books/books';
+import { getBooksList, deleteBook } from '../redux/books/books';
 
-const ListOfBooks = ({ item }) => {
+const ListOfBooks = () => {
   const dispatchAction = useDispatch();
+  const item = useSelector((state) => state.booksReducer);
+
+  useEffect(() => {
+    dispatchAction(getBooksList());
+  }, [dispatchAction]);
+
   return (
     <div id="listContent flex-col">
       <div className="booksList">
@@ -21,7 +26,7 @@ const ListOfBooks = ({ item }) => {
                 />
                 <div className="buttons-left">
                   <button type="button" className="br blueText">Comments</button>
-                  <button type="button" className="br blueText" onClick={() => dispatchAction(removeBook(book.id))}>Remove</button>
+                  <button type="button" className="br blueText" onClick={() => dispatchAction(deleteBook(book.id))}>Remove</button>
                   <button type="button" className="blueText">Edit</button>
                 </div>
               </div>
@@ -34,15 +39,6 @@ const ListOfBooks = ({ item }) => {
       </div>
     </div>
   );
-};
-
-ListOfBooks.propTypes = {
-  item: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    category: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  })).isRequired,
 };
 
 export default ListOfBooks;
